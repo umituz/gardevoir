@@ -12,9 +12,10 @@ class GardevoirServiceProvider extends ServiceProvider
     public function boot()
     {
         if ($this->app->runningInConsole()) {
-
             $this->registerPublishing();
         }
+
+        $this->loadViewsFrom(__DIR__.'/../../resources/views', 'gardevoir');
     }
 
     /**
@@ -26,16 +27,6 @@ class GardevoirServiceProvider extends ServiceProvider
     }
 
     /**
-     * Get the services provided by the provider.
-     *
-     * @return array
-     */
-    public function provides()
-    {
-        return array('gardevoir');
-    }
-
-    /**
      * Register publishing
      */
     protected function registerPublishing()
@@ -43,5 +34,9 @@ class GardevoirServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/../../config/gardevoir.php' => config_path('gardevoir.php')
         ], 'gardevoir-config');
+
+        $this->publishes([
+            __DIR__ . '/../../resources/views' => resource_path('views/vendor/gardevoir')
+        ], 'gardevoir-views');
     }
 }
