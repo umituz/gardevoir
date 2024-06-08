@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    @include('layouts.head')
+    @include('gardevoir::layouts.head')
 </head>
 <body>
-@include('layouts.header.index')
+@include('gardevoir::layouts.header.index')
 
 <div class="container-fluid">
     <div class="row">
-        @include('admin.layouts.sidebar.index')
+        @include('gardevoir::layouts.sidebar.index')
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4 mt-3" style="margin-bottom: 60px;">
             @yield('content')
@@ -17,8 +17,8 @@
     </div>
 </div>
 
-@include('layouts.footer')
-@include('layouts.script')
+@include('gardevoir::layouts.footer')
+@include('gardevoir::layouts.script')
 
 </body>
 </html>
