@@ -7,7 +7,7 @@
 @section('form')
     <div class="relative bg-white bg-opacity-90 p-8 rounded-lg shadow-lg w-full max-w-md">
         <div class="absolute top-5 right-0 mr-5">
-            @include('frontend.partials.language-switcher')
+            @include('gardevoir::partials.language-switcher')
         </div>
         <h2 class="text-2xl font-bold mb-4">{{ __('Login') }}</h2>
         @if ($errors->any())
@@ -31,4 +31,22 @@
                 <div class="text-red-500 text-sm mt-1">{{ $message }}</div>
                 @enderror
             </div>
-    @include('frontend.partials.recaptcha
+            @include('gardevoir::partials.recaptcha', ['formId' => 'loginForm', 'buttonText' => __('Login')])
+        </form>
+    </div>
+@endsection
+
+@push('styles')
+    <style>
+        .form-input {
+            border: 1px solid #ddd;
+            padding: 0.75rem;
+            border-radius: 0.375rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        .form-input:focus {
+            border-color: #3182ce;
+        }
+    </style>
+@endpush

@@ -9,7 +9,7 @@
 </head>
 <body class="flex justify-center items-center h-screen bg-gradient-to-r from-blue-100 to-blue-300">
 <div class="flex h-full w-full">
-    @include('gardevoir::frontend.auth.layouts.logo')
+    @include('gardevoir::auth.layouts.logo')
     <div class="flex justify-center items-center w-full md:w-1/2 h-full p-4">
         @yield('form')
     </div>

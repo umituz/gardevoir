@@ -7,7 +7,7 @@
 @section('form')
     <div class="relative register-container bg-white bg-opacity-90 p-8 rounded-lg shadow-lg w-full max-w-4xl mx-auto">
         <div class="absolute top-5 right-0 mr-5">
-            @include('frontend.partials.language-switcher')
+            @include('gardevoir::partials.language-switcher')
         </div>
         <h2 class="text-2xl font-bold mb-4">{{ __('Register') }}</h2>
 
@@ -45,14 +45,10 @@
                 </div>
             </div>
 
-            <div class="mt-4">
-                @includeWhen(view()->exists('frontend.auth.register.channel'), 'frontend.auth.register.channel')
-            </div>
-
             <div class="mt-4 flex items-start space-x-2">
                 <input type="checkbox" name="accept_terms" id="accept_terms" class="form-checkbox mt-1">
                 <label for="accept_terms" class="text-sm text-gray-700">
-                    <a href="#" class="text-blue-500 underline">{{ __('QR Level Terms of Use') }}</a> ve
+                    <a href="#" class="text-blue-500 underline">{{ env('APP_NAME') }} {{ __(' Terms of Use') }}</a> ve
                     <a href="#" class="text-blue-500 underline">{{ __('Privacy Policy') }}</a> {{ __('I have read, understood and accept.') }}
                 </label>
             </div>
@@ -64,7 +60,7 @@
             </div>
 
             <div class="mt-4">
-                @include('frontend.partials.recaptcha', ['formId' => 'registerForm', 'buttonText' => __('Register')])
+                @include('gardevoir::partials.recaptcha', ['formId' => 'registerForm', 'buttonText' => __('Register')])
             </div>
         </form>
         <div class="mt-4">
