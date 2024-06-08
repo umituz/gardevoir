@@ -1,7 +1,16 @@
 <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAccount" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <img src="{{ Auth::user()?->getFirstMediaUrl('avatar') ?: asset('avatar.png') }}" alt="Avatar" class="avatar rounded-circle" width="30" height="30">
-        {{ Auth::user()?->full_name }}
+        @if(Auth::check())
+            @if(method_exists(Auth::user(), 'getFirstMediaUrl'))
+                <img src="{{ Auth::user()->getFirstMediaUrl('avatar') ?: asset('avatar.png') }}" alt="Avatar" class="avatar rounded-circle" width="30" height="30">
+            @else
+                <img src="{{ asset('avatar.png') }}" alt="Avatar" class="avatar rounded-circle" width="30" height="30">
+            @endif
+            {{ Auth::user()->full_name }}
+        @else
+            <img src="{{ asset('avatar.png') }}" alt="Avatar" class="avatar rounded-circle" width="30" height="30">
+            {{ __('Guest') }}
+        @endif
     </a>
     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownAccount">
         @auth
