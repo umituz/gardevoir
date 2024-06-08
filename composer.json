@@ -1,7 +1,7 @@
 {
     "name": "umituz/gardevoir",
     "description": "Gardevoir, flexible beautiful admin panel",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "keywords": [
         "umituz",
         "gardevoir"
@@ -30,9 +30,9 @@
     },
     "extra": {
         "laravel": {
-            "providers": []
-        },
-        "aliases": {
+            "providers": [
+                "Gardevoir\\Providers\\GardevoirServiceProvider"
+            ]
         }
     }
 }

@@ -7,6 +7,16 @@ use Illuminate\Support\ServiceProvider;
 class GardevoirServiceProvider extends ServiceProvider
 {
     /**
+     * Get the services provided by the provider.
+     *
+     * @return array
+     */
+    public function provides()
+    {
+        return ['gardevoir'];
+    }
+
+    /**
      * Boot
      */
     public function boot()
