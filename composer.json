@@ -1,0 +1,38 @@
+{
+    "name": "umituz/gardevoir",
+    "description": "Gardevoir, flexible beautiful admin panel",
+    "version": "1.0.14",
+    "keywords": [
+        "umituz",
+        "gardevoir"
+    ],
+    "homepage": "https://github.com/umituz/gardevoir",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ümit UZ",
+            "email": "info@umituz.com",
+            "homepage": "https://umituz.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Gardevoir\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": []
+        },
+        "aliases": {
+        }
+    }
+}
