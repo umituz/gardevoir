@@ -1,10 +1,10 @@
 <?php
 
-namespace Gardevoir\Providers;
+namespace Trinity\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-class GardevoirServiceProvider extends ServiceProvider
+class TrinityServiceProvider extends ServiceProvider
 {
     /**
      * Get the services provided by the provider.
@@ -13,7 +13,7 @@ class GardevoirServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['gardevoir'];
+        return ['trinity'];
     }
 
     /**
@@ -25,7 +25,7 @@ class GardevoirServiceProvider extends ServiceProvider
             $this->registerPublishing();
         }
 
-        $this->loadViewsFrom(__DIR__.'/../../resources/views', 'gardevoir');
+        $this->loadViewsFrom(__DIR__.'/../../resources/views', 'trinity');
     }
 
     /**
@@ -42,11 +42,11 @@ class GardevoirServiceProvider extends ServiceProvider
     protected function registerPublishing()
     {
         $this->publishes([
-            __DIR__ . '/../../config/gardevoir.php' => config_path('gardevoir.php')
-        ], 'gardevoir-config');
+            __DIR__ . '/../../config/trinity.php' => config_path('trinity.php')
+        ], 'trinity-config');
 
         $this->publishes([
-            __DIR__ . '/../../resources/views' => resource_path('views/vendor/gardevoir')
-        ], 'gardevoir-views');
+            __DIR__ . '/../../resources/views' => resource_path('views/vendor/trinity')
+        ], 'trinity-views');
     }
 }

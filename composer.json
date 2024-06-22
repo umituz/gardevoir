@@ -1,12 +1,12 @@
 {
-    "name": "umituz/gardevoir",
-    "description": "Gardevoir, flexible beautiful admin panel",
+    "name": "umituz/trinity",
+    "description": "Trinity, flexible beautiful panel project",
     "version": "1.0.9",
     "keywords": [
         "umituz",
-        "gardevoir"
+        "trinity"
     ],
-    "homepage": "https://github.com/umituz/gardevoir",
+    "homepage": "https://github.com/umituz/trinity",
     "license": "MIT",
     "authors": [
         {
@@ -25,13 +25,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Gardevoir\\": "src/"
+            "Trinity\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Gardevoir\\Providers\\GardevoirServiceProvider"
+                "Trinity\\Providers\\TrinityServiceProvider"
             ]
         }
     }

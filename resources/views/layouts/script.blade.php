@@ -9,7 +9,7 @@
 <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
 
-@include('gardevoir::partials.general.sweet_alert')
+@include('trinity::partials.general.sweet_alert')
 
 <script>
     $(document).ready(function() {

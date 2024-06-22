@@ -12,9 +12,9 @@
                     </a>
                 </li>
 
-                @include('gardevoir::layouts.header.language')
+                @include('trinity::layouts.header.language')
 
-                @include('gardevoir::layouts.header.auth')
+                @include('trinity::layouts.header.auth')
             </ul>
         </div>
     </div>

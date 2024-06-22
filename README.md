@@ -1,6 +1,6 @@
-### Gardevoir
+### Trinity
 
-- Gardevoir
+- Trinity
 
 Source Links
 
@@ -9,6 +9,6 @@ Source Links
 Installation 
 =============
 
-$ composer require umituz/gardevoir
+$ composer require umituz/trinity
 
-php artisan vendor:publish --provider="Gardevoir\Providers\GardevoirServiceProvider"
+php artisan vendor:publish --provider="Trinity\Providers\TrinityServiceProvider"

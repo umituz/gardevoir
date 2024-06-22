@@ -1,4 +1,4 @@
-@extends('gardevoir::layouts.app')
+@extends('trinity::layouts.app')
 
 @section('content')
     <div class="container">

@@ -16,7 +16,7 @@
     @enderror
 </div>
 
-@include('gardevoir::partials.form.file_uploader')
+@include('trinity::partials.form.file_uploader')
 
 <script>
     function previewImage(input, previewId) {

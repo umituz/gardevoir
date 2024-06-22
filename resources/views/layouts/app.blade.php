@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    @include('gardevoir::layouts.head')
+    @include('trinity::layouts.head')
     <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
 </head>
 <body>
-@include('gardevoir::layouts.header.index')
+@include('trinity::layouts.header.index')
 
 <div class="container-fluid">
     <div class="row">
-        {{--        @yield('sidebar', View::make('gardevoir::layouts.sidebar.index'))--}}
+        {{--        @yield('sidebar', View::make('trinity::layouts.sidebar.index'))--}}
         @section('sidebar')
             @include('layouts.sidebar.index')
         @show
@@ -20,8 +20,8 @@
     </div>
 </div>
 
-@include('gardevoir::layouts.footer')
-@include('gardevoir::layouts.script')
+@include('trinity::layouts.footer')
+@include('trinity::layouts.script')
 
 </body>
 </html>

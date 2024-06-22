@@ -1,4 +1,4 @@
-@extends('gardevoir::auth.layouts.app')
+@extends('trinity::auth.layouts.app')
 
 @push('title')
     <title>{{ __('Login') }}</title>
@@ -7,7 +7,7 @@
 @section('form')
     <div class="relative bg-white bg-opacity-90 p-8 rounded-lg shadow-lg w-full max-w-md">
         <div class="absolute top-5 right-0 mr-5">
-            @include('gardevoir::partials.language-switcher')
+            @include('trinity::partials.language-switcher')
         </div>
         <h2 class="text-2xl font-bold mb-4">{{ __('Login') }}</h2>
         @if ($errors->any())
@@ -31,7 +31,7 @@
                 <div class="text-red-500 text-sm mt-1">{{ $message }}</div>
                 @enderror
             </div>
-            @include('gardevoir::partials.recaptcha', ['formId' => 'loginForm', 'buttonText' => __('Login')])
+            @include('trinity::partials.recaptcha', ['formId' => 'loginForm', 'buttonText' => __('Login')])
         </form>
     </div>
 @endsection

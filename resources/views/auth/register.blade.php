@@ -1,4 +1,4 @@
-@extends('gardevoir::auth.layouts.app')
+@extends('trinity::auth.layouts.app')
 
 @push('title')
     <title>{{ __('Register') }}</title>
@@ -7,7 +7,7 @@
 @section('form')
     <div class="relative register-container bg-white bg-opacity-90 p-8 rounded-lg shadow-lg w-full max-w-4xl mx-auto">
         <div class="absolute top-5 right-0 mr-5">
-            @include('gardevoir::partials.language-switcher')
+            @include('trinity::partials.language-switcher')
         </div>
         <h2 class="text-2xl font-bold mb-4">{{ __('Register') }}</h2>
 
@@ -60,7 +60,7 @@
             </div>
 
             <div class="mt-4">
-                @include('gardevoir::partials.recaptcha', ['formId' => 'registerForm', 'buttonText' => __('Register')])
+                @include('trinity::partials.recaptcha', ['formId' => 'registerForm', 'buttonText' => __('Register')])
             </div>
         </form>
         <div class="mt-4">
